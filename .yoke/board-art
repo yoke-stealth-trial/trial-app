@@ -1,0 +1,66 @@
+# Board header art — read by the Yoke board renderer on every rebuild.
+# Render tuning (bucket weights, frontier window) lives in project-policy.settings.board;
+# to pin a variant, set art_override there (e.g. frontier, rainbow_letters,
+# ascii_1, mixed_1).
+#
+# Sections:
+#   ## Master Map  -- emoji grid of ⬜ (fill target) and ⬛ (structural) cells;
+#                     drives the frontier progress fill and rainbow modes.
+#   ## Emoji       -- hand-drawn standalone emoji grids, rendered verbatim.
+#   ## ASCII       -- raw monospace text art (no dimension constraints).
+#   ## Mixed       -- text + emoji, pasted like ASCII art.
+#
+# A "# weight:N" line immediately above a section header weights that variant
+# within its bucket; once any variant in a bucket carries a weight, unweighted
+# variants in that bucket fall to 0. "# weight-disabled:N" is ignored (parked).
+
+## Master Map
+
+⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
+⬛⬛⬜⬜⬜⬜⬜⬛⬛⬜⬜⬜⬜⬜⬜⬜⬛⬛⬛⬜⬜⬛⬛⬛
+⬛⬜⬜⬛⬛⬛⬜⬜⬛⬜⬜⬜⬜⬜⬜⬜⬛⬛⬛⬜⬜⬛⬛⬛
+⬛⬜⬜⬛⬛⬛⬛⬛⬛⬛⬛⬛⬜⬛⬛⬛⬛⬛⬜⬜⬜⬜⬛⬛
+⬛⬜⬜⬛⬛⬛⬛⬛⬛⬛⬛⬛⬜⬛⬛⬛⬛⬛⬜⬜⬜⬜⬛⬛
+⬛⬜⬜⬛⬛⬛⬛⬛⬛⬛⬛⬛⬜⬛⬛⬛⬛⬛⬜⬛⬛⬜⬜⬛
+⬛⬛⬜⬜⬜⬜⬛⬛⬛⬛⬛⬛⬜⬛⬛⬛⬛⬜⬜⬛⬛⬛⬜⬛
+⬛⬛⬛⬛⬛⬜⬜⬛⬛⬛⬛⬛⬜⬛⬛⬛⬛⬜⬜⬛⬛⬛⬜⬛
+⬛⬛⬛⬛⬛⬛⬜⬜⬛⬛⬛⬛⬜⬛⬛⬛⬛⬜⬜⬜⬜⬜⬜⬛
+⬛⬛⬛⬛⬛⬛⬜⬜⬛⬛⬛⬛⬜⬛⬛⬛⬛⬜⬜⬛⬛⬛⬜⬛
+⬛⬛⬛⬛⬛⬛⬜⬜⬛⬛⬛⬛⬜⬛⬛⬛⬛⬜⬜⬛⬛⬛⬜⬛
+⬛⬜⬜⬛⬛⬛⬜⬜⬛⬛⬛⬛⬜⬛⬛⬛⬛⬜⬜⬛⬛⬛⬜⬛
+⬛⬛⬜⬜⬜⬜⬜⬛⬛⬛⬛⬛⬜⬛⬛⬛⬛⬜⬜⬛⬛⬛⬜⬛
+⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
+
+## ASCII
+
+ ____ _____  _
+/ ___|_   _|/ \
+\___ \ | | / _ \
+ ___) || |/ ___ \
+|____/ |_/_/   \_\
+
+## Emoji
+
+🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦
+🟦🟫🟫🟦🟦🟦🟦🟫🟫🟦
+🟦🟫🟫🟫🟦🟦🟫🟫🟫🟦
+🟦🟫🟫🟫🟨🟨🟫🟫🟫🟦
+🟦🟨🟨🟨🟨🟨🟨🟨🟨🟦
+🟦🟨⚫🟨🟨🟨🟨⚫🟨🟦
+🟦🟨🟨🟨⚫⚫🟨🟨🟨🟦
+🟦🟨🟨🟨🟨🟨🟨🟨🟨🟦
+🟦🟨🟨🟫🟫🟫🟫🟨🟨🟦
+🟦🟦🟨🟨🟨🟨🟨🟨🟦🟦
+🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦
+
+## Mixed
+
+                        🟦🟦🟦🟦🟦🟦🟦🟦🟦
+  _____ _______         🟦🟦🟧🟦🟧🟦🟧🟦🟦
+ / ____|__   __|/\      🟦🟧🟨🟧🟨🟧🟨🟧🟦
+| (___    | |  /  \     🟦🟦🟧🟨🟨🟨🟧🟦🟦
+ \___ \   | | / /\ \    🟦🟧🟨⚫🟨⚫🟨🟧🟦
+ ____) |  | |/ ____ \   🟦🟧🟨🟨🟧🟨🟨🟧🟦
+|_____/   |_/_/    \_\  🟦🟦🟧🟨🟨🟨🟧🟦🟦
+                        🟦🟧🟦🟧🟦🟧🟦🟧🟦
+                        🟦🟦🟦🟦🟦🟦🟦🟦🟦
